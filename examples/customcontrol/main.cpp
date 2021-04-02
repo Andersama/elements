@@ -17,6 +17,11 @@ float distance(point a, point b)
 {
    return sqrt(pow(b.x - a.x, 2) +  pow(b.y - a.y, 2) * 1.0);
 }
+// Function to approximate distance
+float fast_distance(point a, point b) {
+  double c = (b.x - a.x) * (b.x - a.x) + (b.y - a.y) * (b.y - a.y);
+  return sqrt(c);
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // There are many ways to structure an application using elements. The user is
